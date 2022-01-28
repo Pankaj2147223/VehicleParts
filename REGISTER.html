@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<HTML style="height:auto" >
+    <head>
+        <title>
+            REGISTER
+        </title>
+
+        <link rel="stylesheet" href="stylesheet.css">
+
+    </head>
+<body>
+  
+
+
+  <h1>Automania.</h1>
+
+    <div class="header">
+        <div class="header-right">
+            <strong><a href="lab1.html">Home</a>
+            <a href="Support.html">Support</a>
+            <a href="lab1.html">About</a></strong>
+        </div>
+    </div>
+
+    <div class="form_login_register">
+        <div class="registerTable">
+        <form onsubmit="return validate()" >
+            <div class="container">
+              <h2>Sign Up</h2>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <label><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" value="" onkeypress="return /[a-z]/i.test(event.key)" id="uname" required>
+
+              <label><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" value="" id="emailid" required> 
+          
+              <label><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" value="" id="pass" required >
+          
+              <label><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" value="" id="passr" required> 
+
+              <label><b>Phone Number</b></label>
+              <input type="Number" placeholder="phone" value="" id="phone" required>
+          
+              <label>
+                <input type="checkbox" checked="checked" onclick="remember()" id="cbox"> Remember me
+              </label>
+          
+              <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+    </div>
+
+
+    <script>  
+
+      var email=document.getElementById('emailid');
+      var number=document.getElementById('phone');
+      var username=document.getElementById("uname");
+      var password=document.getElementById("pass");
+      var passwordre = document.getElementById("passr");
+      var check_box = document.getElementById("cbox");
+  
+      const regexemail=/^([a-zA-Z0-9]{8,20}@(christ.in))$/;
+      const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})(.[a-z]{1,8})$/;
+  
+      var regnum = new RegExp("^[5-9][0-9]{9}$");
+      var patternpass = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[-+_!@#$%^&*.,?]).+$");
+
+
+      if(document.cookie.length!=0)
+        {
+            //const regexcookie = /Username=(.*?);/;
+            const valueUname = ('; '+document.cookie).split(`; Username=`).pop().split(';')[0];
+            const valueEmail= ('; '+document.cookie).split(`; Email=`).pop().split(';')[0];
+            const valuePhone = ('; '+document.cookie).split(`; Phone=`).pop().split(';')[0];
+            username.value = valueUname;
+            email.value = valueEmail;
+            number.value = valuePhone;
+
+        }
+
+      function setCooki()
+      {
+        document.cookie="Username="+username.value+";expires=Fri,2 Feb 2022 01:00:00 UTC";
+        document.cookie="Email="+email.value+";expires=Fri,2 Feb 2022 01:00:00 UTC";
+        document.cookie="Phone="+number.value+";expires=Fri,2 Feb 2022 01:00:00 UTC";
+      }
+
+
+      function validate()
+      {
+  
+        if(!patternpass.test(password.value))
+        {
+          alert("Inavlid Password!");
+          return false;
+        }
+        else if(!regnum.test(number.value))
+        {  
+          alert("Inavlid Phone!");
+          return false;
+    
+        }
+        else if(!regexemail.test(email.value))
+        {
+           alert("Inavlid Email!");
+           return false;
+        }
+        if(password.value !== passwordre.value)
+        {  
+          alert("Password Doesn't Match!");
+          return false;
+        }
+
+        var check_box = document.getElementById("cbox");
+        if(check_box.checked)
+        {
+          setCooki();
+        }
+
+      }
+         
+  </script>
+
+</body>
+</HTML>

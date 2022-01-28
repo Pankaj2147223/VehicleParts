@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+
+<body>
+    <script>
+        // JavaScript program to check if the string
+        // contains uppercase, lowercase
+        // special character & numeric value
+    
+        function isAllPresent(str) {
+            // Regex to check if a string
+            // contains uppercase, lowercase
+            // special character & numeric value
+            var pattern = new RegExp(
+            "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[-+_!@#$%^&*.,?]).+$"
+            );
+    
+            // If the string is empty
+            // then print No
+            if (!str || str.length === 0) {
+            document.write("No" + "<br>");
+            return;
+            }
+    
+            // Print Yes If the string matches
+            // with the Regex
+            if (pattern.test(str)) {
+            document.write("Yes" + "<br>");
+            } else {
+            document.write("No" + "<br>");
+            }
+            return;
+        }
+    
+        // Driver Code
+        var str = "pankajS";
+        isAllPresent(str);
+        </script>
+    
+</body>
+
+</html>

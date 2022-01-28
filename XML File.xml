@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XSL.xsl"?>
+<Automania xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="XSD.xsd">
+  <Category>
+    <Name>Blade Set</Name>
+    <Price>1000</Price>
+    <Quantity>200</Quantity>
+  </Category>
+
+  <Category>
+    <Name>Oil Filter</Name>
+    <Price>2000</Price>
+    <Quantity>25</Quantity>
+  </Category>
+
+  <Category>
+    <Name>Air Conditioner Filter</Name>
+    <Price>2000</Price>
+    <Quantity>50</Quantity>
+  </Category>
+
+  <Category>
+  <Name>Seat Cover</Name>
+    <Price>800</Price>
+    <Quantity>200</Quantity>
+  </Category>
+
+  <Category>
+    <Name>Polish</Name>
+    <Price>2000</Price>
+    <Quantity>25</Quantity>
+  </Category>
+
+  <Category>
+    <Name>Tyres</Name>
+    <Price>2000</Price>
+    <Quantity>50</Quantity>
+  </Category>
+
+  <Customer>
+    <C_Name>Pankaj</C_Name>
+    <Phone>9012345678</Phone>
+    <Emailid>Pankaj@gmail.com</Emailid>
+    <Id>1</Id>
+  </Customer>
+
+  <Customer>
+    <C_Name>Ritish</C_Name>
+    <Phone>9012875678</Phone>
+    <Emailid>Ritish@gmail.com</Emailid>
+    <Id>2</Id>
+  </Customer>
+
+  <Customer>
+    <C_Name>Sam</C_Name>
+    <Phone>8712345678</Phone>
+    <Emailid>Sam@gmail.com</Emailid>
+    <Id>3</Id>
+  </Customer>
+
+  <Customer>
+    <C_Name>Jackie</C_Name>
+    <Phone>5312345678</Phone>
+    <Emailid>Jackie@gmail.com</Emailid>
+    <Id>4</Id>
+  </Customer>
+
+  <Customer>
+    <C_Name>Gyan</C_Name>
+    <Phone>9876345678</Phone>
+    <Emailid>Gyan@gmail.com</Emailid>
+    <Id>5</Id>
+  </Customer>
+
+  <Inventory>
+    <W_Name>Noida_1</W_Name>
+    <Warehouse_id>1</Warehouse_id>
+    <Emp_name>Samuel</Emp_name>
+    <Unit_present>10000</Unit_present>
+    <Unit_in_transit>200</Unit_in_transit>
+  </Inventory>
+
+  <Inventory>
+    <W_Name>Gurgaon_2</W_Name>
+    <Warehouse_id>2</Warehouse_id>
+    <Emp_name>Niko</Emp_name>
+    <Unit_present>19000</Unit_present>
+    <Unit_in_transit>890</Unit_in_transit>
+  </Inventory>
+
+  <Inventory>
+    <W_Name>Chennai_1</W_Name>
+    <Warehouse_id>3</Warehouse_id>
+    <Emp_name>Sasha</Emp_name>
+    <Unit_present>8300</Unit_present>
+    <Unit_in_transit>6320</Unit_in_transit>
+  </Inventory>
+
+  <Inventory>
+    <W_Name>Bengaluru_2</W_Name>
+    <Warehouse_id>4</Warehouse_id>
+    <Emp_name>Jaya</Emp_name>
+    <Unit_present>78300</Unit_present>
+    <Unit_in_transit>9020</Unit_in_transit>
+  </Inventory>
+  
+  <Inventory>
+    <W_Name>Nagpur_1</W_Name>
+    <Warehouse_id>5</Warehouse_id>
+    <Emp_name>June</Emp_name>
+    <Unit_present>89000</Unit_present>
+    <Unit_in_transit>2300</Unit_in_transit>
+  </Inventory>
+
+  <Supplier>
+    <S_Name>GarageANDcar</S_Name>
+    <Warehouse_id>1</Warehouse_id>
+    <Item_type>Car Filters</Item_type>
+    <Contract_exp>2025-01-20</Contract_exp>
+    <Unit_in_transit>10</Unit_in_transit>
+  </Supplier>
+
+  <Supplier>
+    <S_Name>BikerZ</S_Name>
+    <Warehouse_id>2</Warehouse_id>
+    <Item_type>Bike Modification</Item_type>
+    <Contract_exp>20232-11-16</Contract_exp>
+    <Unit_in_transit>20</Unit_in_transit>
+  </Supplier>
+
+  <Supplier>
+    <S_Name>JumperEquipment</S_Name>
+    <Warehouse_id>3</Warehouse_id>
+    <Item_type>Car Electronic</Item_type>
+    <Contract_exp>2022-10-22</Contract_exp>
+    <Unit_in_transit>5</Unit_in_transit>
+  </Supplier>
+
+  <Supplier>
+    <S_Name>Offorading</S_Name>
+    <Warehouse_id>4</Warehouse_id>
+    <Item_type>Bike Accessories</Item_type>
+    <Contract_exp>20232-11-23</Contract_exp>
+    <Unit_in_transit>59</Unit_in_transit>
+  </Supplier>
+
+  <Supplier>
+    <S_Name>CarHiker</S_Name>
+    <Warehouse_id>5</Warehouse_id>
+    <Item_type>Car Accessories</Item_type>
+    <Contract_exp>2028-12-11</Contract_exp>
+    <Unit_in_transit>89</Unit_in_transit>
+  </Supplier>
+
+  
+
+</Automania>

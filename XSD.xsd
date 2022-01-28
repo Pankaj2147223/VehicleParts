@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="Automania">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Category" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Name" type="xs:string"></xs:element>
+<xs:element name="Price" type="xs:float"></xs:element>
+<xs:element name="Quantity" type="QntAvailable"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:element name="Customer" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="C_Name" type="xs:string"></xs:element>
+<xs:element name="Phone" type="xs:unsignedLong"></xs:element>
+<xs:element name="Emailid" type="xs:string"></xs:element>
+<xs:element name="Id" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:element name="Inventory" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="W_Name" type="xs:string"></xs:element>
+<xs:element name="Warehouse_id" type="xs:long"></xs:element>
+<xs:element name="Emp_name" type="xs:string"></xs:element>
+<xs:element name="Unit_present" type="xs:long"></xs:element>
+<xs:element name="Unit_in_transit" type="xs:long"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:element name="Supplier" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="S_Name" type="xs:string"></xs:element>
+<xs:element name="Warehouse_id" type="xs:long"></xs:element>
+<xs:element name="Item_type" type="xs:string"></xs:element>
+<xs:element name="Contract_exp" type="xs:date"></xs:element>
+<xs:element name="Unit_in_transit" type="xs:long"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:simpleType name="QntAvailable">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="10"></xs:minInclusive>
+<xs:maxInclusive value="1000"></xs:maxInclusive>
+</xs:restriction>
+</xs:simpleType>
+
+
+
+</xs:schema>

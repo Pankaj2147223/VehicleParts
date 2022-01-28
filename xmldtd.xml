@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Automania SYSTEM "xmlt.dtd">
+<Automania>
+	<Category>
+		<Name>1</Name>
+		<Price>ABC</Price>
+		<Quantity>1200</Quantity>
+    </Category>
+	<Category>
+		<Name>2</Name>
+		<Price>XYZ</Price>
+		<Quantity>4000</Quantity>
+    </Category>
+	<Category>
+		<Name>3</Name>
+		<Price>XYZ</Price>
+		<Quantity>4000</Quantity>
+    </Category>
+</Automania>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Automania (Category+)>
+<!ELEMENT Category (Name,Price,Quantity)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT Quantity (#PCDATA)>
