@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background: rgb(5,0,40);
+            background: linear-gradient(142deg, rgba(2,0,36,1) 10%, rgba(56,7,99,1) 35%, rgba(9,9,121,1) 63%, rgba(0,212,255,1) 100%);
+            background-size:cover;
+            color:white;
+            background-position: center center;
+            background-blend-mode:soft-light;
+            background-color: rgba(0,0,0,0.2);
+            background-repeat: no-repeat;
+            font-family: 'Verdana', sans-serif;
+            font-size: 80%;
+            height: 100%;
+        }
+
+        .form_feedback{
+            margin:5% 2% 0 2%;
+            position: relative;
+            display: block;
+            align-self: center;
+          }
+          
+          input[type=text] ,input[type=email] ,input[type=Number]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+          }
+          
+          #feed{
+            width:100%;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+          }
+
+          button {
+            background-color: #0497aa;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+          }
+          
+          button:hover {
+            opacity: 0.8;
+          }
+          
+          .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+          }
+          
+          
+          .container {
+            padding: 16px;
+          }
+          
+          @media screen and (max-width: 991px) {
+          
+            .cancelbtn {
+              width: 100%;
+            }
+          }
+          
+    </style>
+</head>
+<body>
+
+    <h1>Feedback Form</h1>
+
+    <div class = "form_feedback">
+        
+        <form class="forms" onsubmit="return validate()">
+
+            <label>Name</label>
+            <input type="text" value="" name="name" placeholder="Name" id="name" onkeypress="return /[a-z]/i.test(event.key)" required>
+            <span></span>
+
+
+            <label>Address</label>
+            <input type="text" value="" name="address" placeholder="Address" id="address" >
+            <span></span>
+
+
+            <label>Email</label>
+            <input type="Email" value="" name="email" placeholder="Email" id="email" required>
+            <span></span>
+
+            <div class="check_box">
+              <br>
+              <label>Your Favourite Part Of University?</label>
+              <br>
+              <br>
+                <label>
+                <input type="checkbox" onclick="check_remember()" id="cStudents"> Students</label>
+
+                <label>
+                <input type="checkbox" onclick="check_remember()" id="clocation"> Location</label>
+
+                <label>
+                <input type="checkbox" onclick="check_remember()" id="cCampus"> Campus</label>
+
+                <label>
+                <input type="checkbox" onclick="check_remember()" id="cDorm"> Dorm Room</label>
+
+                <label>
+                <input type="checkbox" onclick="check_remember()" id="cAtmosphere"> Atmosphere</label>
+
+                <label>
+                <input type="checkbox" onclick="check_remember()" id="cSports"> Sports</label>
+            </div>
+
+            <div class="radio_btn">
+              <br>
+              <label>Where did you find out about Christ University?</label>
+              <br>
+              <br>
+                <label>
+                <input type="radio" onclick="radio_remember()" name="radio" id="rFriends"> Friends</label>
+
+                <label>
+                <input type="radio" onclick="radio_remember()" name="radio" id="rInternet"> Internet</label>
+
+                <label>
+                <input type="radio" onclick="radio_remember()" name="radio" id="rOther"> Other</label>
+            </div>
+            <br>
+            <br>
+            <label>Feedback</label>
+            <textarea id="feed" name="feed" placeholder="Feedback" value="" cols="40" rows="10"></textarea>
+
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+        </form>
+
+    </div>
+
+    <script>  
+
+      var email=document.getElementById('email');
+      var number=document.getElementById('name');
+      var username=document.getElementById("address");
+  
+      const regexemail=/^([a-zA-Z0-9]{8,30}@(christuniversity.in))$/;
+      const regexadd=/^[a-zA-Z\s\d\/]*\d[a-zA-Z\s\d\/]*$/;
+
+
+      function validate()
+      {
+  
+        if(!regexemail.test(email.value))
+        {
+           alert("Inavlid Email!");
+           return false;
+        }
+
+      }
+         
+  </script>
+</body>
+</html>
